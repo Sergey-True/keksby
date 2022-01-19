@@ -45,19 +45,28 @@ body {
     height: 55px;
 }
 
+.header-logo img{
+    width:205px;
+    height: 55px;
+}
+
 .main-nav {
     float: left;
     width: 520px;
-    margin: 0;
-    margin-left: 125px;
+    margin: 18px 0 0 125px;
     padding: 0;
     list-style: none;
+
 }
 
 .main-nav li {
+    float:left;
+    margin-right: 50px;
     text-transform: uppercase;
 }
-
+.main-nav li:last-child {
+    margin-right: 0;
+}
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
@@ -72,21 +81,46 @@ body {
 }
 
 .btn {
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid #a38b70;
     color: #a38b70;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 10px;
+    width:146px;
+    word-wrap:break-word;
+    text-align: center;
+    font:inherit;
+    border-radius:2px;
 }
 
 .btn:hover {
     color: #8d745a;
+    border-color: #8d745a;
 }
 
 .btn:active {
     color: rgba(141, 116, 90, 0.3);
+    border-color:#8d745a;
 }
 
 .btn-quick-order {
     float: right;
+    margin-top: 6px;
+    border-color: #fff;
+    color: #fff;
+}
+.btn-quick-order:hover{
+    color: #404040;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn-quick-order:active{
+    color: rgba(64, 64, 64, 0.3);
+    border-color: #fff;
+    background-color: #fff;
 }
 
 .promo {
@@ -114,6 +148,7 @@ body {
 }
 
 .feature-item {
+    position: relative;
     float: left;
     width: 279px;
     padding-top: 90px;
@@ -121,23 +156,36 @@ body {
     padding-left: 30px;
     text-align: center;
     border-left: 1px solid #d9d9d9;
+
+}
+
+.feature-item p{
+    margin:0;
+}
+
+.feature-item::before{
+    content: "";
+    position: absolute;
+    width:65px;
+    height: 65px;
+    top:0;
+    left:137px;
+    background: url('img/sprite.png') no-repeat;
 }
 
 .feature-item:first-child {
     border-left-color: transparent;
 }
-
-.feature-choice {
-    background: url("img/feature-1.png") top center no-repeat;
+.feature-choice::before{
+    background-position: -5px -5px;
+}
+.feature-quality::before{
+    background-position: -5px -76px;
+}
+.feature-safety::before{
+    background-position: 1px -143px;
 }
 
-.feature-quality {
-    background: url("img/feature-2.png") top center no-repeat;
-}
-
-.feature-safety {
-    background: url("img/feature-3.png") top center no-repeat;
-}
 
 .feature-title {
     font-weight: bold;
@@ -145,6 +193,7 @@ body {
     line-height: 30px;
     font-family: "Georgia", serif;
     color: #a38b70;
+    margin: 0 0 20px 0;
 }
 
 .cat-reference {
@@ -154,6 +203,7 @@ body {
 }
 
 .section-title {
+    margin: 0 180px 60px 0;
     font-weight: bold;
     font-size: 45px;
     line-height: 55px;
@@ -161,23 +211,58 @@ body {
     color: #a38b70;
 }
 
+.cat-reference .container{
+    position: relative;
+}
+.to-full-reference {
+    position: absolute;
+    top:5px;
+    right:0;
+}
 .cat-reference dl {
     width: 830px;
+    margin: 0;
+    padding: 0;
 }
 
 .cat-reference dt {
     margin: 0;
     margin-bottom: 10px;
+    position: relative;
+    padding-left: 130px;
+    min-height: 100px;
 }
 
 .cat-reference dd {
     margin: 0;
+    position: relative;
+    padding-left: 130px;
+    min-height: 100px;
 }
 
 .cat-reference dd img {
     border-radius: 5px;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100px;
+    height:100px;
 }
 
+.cat-reference p {
+    margin: 0;
+}
+
+.reference-source a::after{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -10px;
+    background: url('img/sprite.png') no-repeat;
+    background-position: -5px -210px;
+}
 .theory-container:first-child {
     margin-bottom: 70px;
 }
@@ -196,6 +281,7 @@ body {
 
 .reference-source a {
     color: #a38b70;
+    position: relative;
 }
 
 .reference-source a:hover {
